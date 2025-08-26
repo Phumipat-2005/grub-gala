@@ -7,6 +7,30 @@ const OrderSuccess = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Check if we have the required state data
+  if (!location.state) {
+    return (
+      <div className="min-h-screen bg-hero-gradient flex items-center justify-center p-4">
+        <Card className="w-full max-w-md text-center shadow-elegant">
+          <CardHeader>
+            <CardTitle className="text-destructive">ไม่พบข้อมูลออเดอร์</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-muted-foreground">
+              กรุณาสั่งอาหารผ่านระบบเพื่อดูหน้านี้
+            </p>
+            <Button 
+              variant="hero" 
+              onClick={() => navigate("/restaurants")}
+            >
+              กลับสู่หน้าหลัก
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
   const { orderNumber, total, restaurantName, estimatedTime } = location.state as {
     orderNumber: string;
     total: number;
