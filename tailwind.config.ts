@@ -88,7 +88,22 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out'
+			},
+			backgroundImage: {
+				'teal-gradient': 'var(--teal-gradient)',
+				'orange-gradient': 'var(--orange-gradient)',
+				'hero-gradient': 'var(--hero-gradient)'
+			},
+			boxShadow: {
+				'teal': 'var(--shadow-teal)',
+				'orange': 'var(--shadow-orange)',
+				'elegant': 'var(--shadow-elegant)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)'
 			}
 		}
 	},
