@@ -43,6 +43,15 @@ const Auth = () => {
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-bold text-primary">ระบบสั่งอาหาร</CardTitle>
           <CardDescription className="text-muted-foreground">เข้าสู่ระบบหรือสมัครสมาชิกใหม่</CardDescription>
+          <div className="mt-4">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => navigate("/personas")}
+            >
+              ดู User Personas
+            </Button>
+          </div>
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="login" className="w-full">
